@@ -1,0 +1,78 @@
+Started GET "/" for ::1 at 2020-09-28 18:10:31 -0400
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/bretgibson/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/bretgibson/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.4ms | Allocations: 482)
+Completed 200 OK in 28ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 2749)
+
+
+Started GET "/users" for ::1 at 2020-09-28 18:10:35 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (3.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (13.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 26]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 27]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 24]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 28]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 27]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 25]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 26]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 21]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 27]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 24]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 21]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 28]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 30]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 24]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 26]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 29]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 29]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 22]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 24]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 22]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 30]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 31]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 25]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 28]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 32]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 25]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 22]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_users" ON "groups"."id" = "group_users"."group_id" WHERE "group_users"."user_id" = $1[0m  [["user_id", 33]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "group_books" ON "books"."id" = "group_books"."book_id" WHERE "group_books"."group_id" = $1[0m  [["group_id", 22]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (7.63ms)
+Completed 200 OK in 235ms (Views: 12.1ms | ActiveRecord: 73.5ms | Allocations: 80090)
+
+
