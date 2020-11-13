@@ -1,4 +1,4 @@
-# Book Club App Backend
+# Readit Backend!
 
 - Built with Ruby on Rails following the model, view, controller design pattern
 
